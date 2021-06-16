@@ -1,7 +1,5 @@
 package com.example.notesapp;
 
-import androidx.annotation.NonNull;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
