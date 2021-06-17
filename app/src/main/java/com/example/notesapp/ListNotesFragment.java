@@ -1,10 +1,12 @@
 package com.example.notesapp;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,10 +31,7 @@ public class ListNotesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            String param1 = getArguments().getString("PARAM1");
-            Log.d("123", "onCreate: "+param1);
-        }
+
     }
 
     @Override
@@ -50,14 +49,26 @@ public class ListNotesFragment extends Fragment {
                 tv.setTextSize(30);
 
                 tv.setOnClickListener(v -> {
-
-                    Toast.makeText(getContext(),note.toString(),Toast.LENGTH_SHORT).show();
+                    showNote(note);
                 });
 
                 ((LinearLayout) view).addView(tv);
-
             }
         }
+    }
+
+    private void showNote(Note note) {
+        NoteFragment noteFragment = NoteFragment.newInstance(note);
+        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+
+        if (getResources().getConfiguration().orientation== Configuration.ORIENTATION_PORTRAIT) {
+            fragmentTransaction.replace(R.id.maincontainer,noteFragment);
+            fragmentTransaction.addToBackStack(null);
+        }else {
+            fragmentTransaction.replace(R.id.note_container,noteFragment);
+        }
+
+        fragmentTransaction.commit();
     }
 
     public static ListNotesFragment newInstance(Notes notes) {
