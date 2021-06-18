@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/date_time_note"
+        android:id="@+id/date_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -25,5 +25,11 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:text="@string/description_note" />
+
+    <Button
+        android:id="@+id/btn_change_date_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_change_date_note_name" />
 
 </LinearLayout>
