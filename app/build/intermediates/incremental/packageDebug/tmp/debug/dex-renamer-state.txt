@@ -1,0 +1,10 @@
+#Fri Jun 18 15:59:36 SAMT 2021
+base.2=/home/sav/AndroidStudioProjects/Notes/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+path.2=13/classes.dex
+base.1=/home/sav/AndroidStudioProjects/Notes/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+path.1=0/classes.dex
+base.0=/home/sav/AndroidStudioProjects/Notes/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
