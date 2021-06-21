@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="note">Заголовок заметки</string>
+    <string name="dttm_note">дата</string>
+    <string name="description_note">Описание заметки</string>
+    <string name="btn_change_date_note_name">Изменить дату заметки</string>
+    <string name="btn_ok">OK</string>
+</resources>
