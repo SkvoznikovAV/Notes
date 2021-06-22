@@ -26,8 +26,8 @@
 18        android:supportsRtl="true"
 18-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:10:9-35
 19        android:testOnly="true"
-20        android:theme="@style/Theme.NotesApp" >
-20-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:11:9-46
+20        android:theme="@style/AppTheme.NoActionBar" >
+20-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:11:9-52
 21        <activity android:name="com.example.notesapp.MainActivity" >
 21-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:12:9-18:20
 21-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:12:19-47

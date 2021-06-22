@@ -85,7 +85,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/sav/.
 	android:allowBackup
 		ADDED from /home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:11:9-46
+		ADDED from /home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:11:9-52
 activity#com.example.notesapp.MainActivity
 ADDED from /home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
