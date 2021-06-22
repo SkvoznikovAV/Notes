@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 public class AboutAppFragment extends Fragment {
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

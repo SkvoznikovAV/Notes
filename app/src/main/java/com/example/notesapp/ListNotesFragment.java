@@ -32,12 +32,6 @@ public class ListNotesFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -52,24 +46,7 @@ public class ListNotesFragment extends Fragment {
                 tv.setTextSize(30);
 
                 tv.setOnLongClickListener(v -> {
-                    Activity activity = requireActivity();
-                    PopupMenu popupMenu = new PopupMenu(activity, v);
-                    activity.getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
-
-                    popupMenu.setOnMenuItemClickListener(item -> {
-                        int id = item.getItemId();
-                        switch (id) {
-                            case R.id.popup_item_del:
-                                Toast.makeText(getContext(), "Удаление заметки", Toast.LENGTH_SHORT).show();
-                                return true;
-                            case R.id.popup_item_arh:
-                                Toast.makeText(getContext(), "Перемещение в архив", Toast.LENGTH_SHORT).show();
-                                return true;
-                        }
-                        return true;
-                    });
-                    popupMenu.show();
-                    return false;
+                    return showNoteMenu(v);
                 });
 
                 tv.setOnClickListener(v -> {
@@ -79,6 +56,27 @@ public class ListNotesFragment extends Fragment {
                 ((LinearLayout) view).addView(tv);
             }
         }
+    }
+
+    private boolean showNoteMenu(View v) {
+        Activity activity = requireActivity();
+        PopupMenu popupMenu = new PopupMenu(activity, v);
+        activity.getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+
+        popupMenu.setOnMenuItemClickListener(item -> {
+            int id = item.getItemId();
+            switch (id) {
+                case R.id.popup_item_del:
+                    Toast.makeText(getContext(), "Удаление заметки", Toast.LENGTH_SHORT).show();
+                    return true;
+                case R.id.popup_item_arh:
+                    Toast.makeText(getContext(), "Перемещение в архив", Toast.LENGTH_SHORT).show();
+                    return true;
+            }
+            return true;
+        });
+        popupMenu.show();
+        return false;
     }
 
     private void showNote(Note note) {
