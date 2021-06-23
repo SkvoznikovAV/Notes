@@ -43,20 +43,11 @@ public class ChangeDateNoteFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         DatePicker datePicker = view.findViewById(R.id.datePicker);
-
         String[] arrDate = date.split("\\.");
-
-
         datePicker.init(Integer.parseInt(arrDate[2]),Integer.parseInt(arrDate[1])-1,Integer.parseInt(arrDate[0]),null);
 
-
         view.findViewById(R.id.btn_ok).setOnClickListener(v -> {
-//            FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-//            fragmentTransaction.remove(this);
-//            fragmentTransaction.commit();
-
             requireActivity().onBackPressed();
-
         });
     }
 }

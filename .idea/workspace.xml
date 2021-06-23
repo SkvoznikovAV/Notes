@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b695297b-3a2b-4a11-8b7f-5b3d0d6eaf92" name="Default Changelist" comment="реализацию меню">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/notesapp/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/notesapp/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/AboutAppFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/AboutAppFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/ChangeDateNoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/ChangeDateNoteFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/ListNotesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/ListNotesFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/NoteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/notesapp/NoteFragment.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\dedan\AndroidStudioProjects\.android\avd\Pixel_4_XL_API_25.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="valueResourceFile" />
+        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1u113dhgU08uy6HDrWkKsQTuC3K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@/home/sav/.android/avd/Pixel_3a_API_30_x86.avd" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-22T13:07:01.699459Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/home/sav/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-view/home/sav/Android/Sdk/sources/android-30/android/widget/DatePicker.java_SELECTED" value="DatePicker" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="NotesApp.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b695297b-3a2b-4a11-8b7f-5b3d0d6eaf92" name="Default Changelist" comment="" />
+      <created>1623818082441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623818082441</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Фрагмент для списка заметок, передача объекта Notes в фрагмент">
+      <created>1623848469092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623848469092</updated>
+    </task>
+    <task id="LOCAL-00002" summary="кнопка и фрагмент корректировки даты">
+      <created>1624017644483</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624017644483</updated>
+    </task>
+    <task id="LOCAL-00003" summary="разное">
+      <created>1624251396683</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624251396684</updated>
+    </task>
+    <task id="LOCAL-00004" summary="реализация меню">
+      <created>1624367328110</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624367328110</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Фрагмент для списка заметок, передача объекта Notes в фрагмент" />
+    <MESSAGE value="кнопка и фрагмент корректировки даты" />
+    <MESSAGE value="разное" />
+    <MESSAGE value="реализацию меню" />
+    <MESSAGE value="реализация меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="реализация меню" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="749" y="259" width="376" height="558" key="#com.intellij.ide.util.MemberChooser" timestamp="1624011725697">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="749" y="259" width="376" height="558" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624011725697" />
+    <state x="524" y="298" width="826" height="480" key="AndroidCreateResourceFileDialog" timestamp="1624359227703">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="524" y="298" width="826" height="480" key="AndroidCreateResourceFileDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624359227703" />
+    <state x="781" y="328" width="311" height="419" key="AndroidCreateXmlResourceDialog" timestamp="1624365205211">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="781" y="328" width="311" height="419" key="AndroidCreateXmlResourceDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624365205211" />
+    <state x="724" y="298" width="426" height="480" key="FileChooserDialogImpl" timestamp="1624360413405">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="724" y="298" width="426" height="480" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624360413405" />
+    <state width="1836" height="289" key="GridCell.Tab.0.bottom" timestamp="1624367054736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624367054736" />
+    <state width="1836" height="289" key="GridCell.Tab.0.center" timestamp="1624367054736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624367054736" />
+    <state width="1836" height="289" key="GridCell.Tab.0.left" timestamp="1624367054736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624367054736" />
+    <state width="1836" height="289" key="GridCell.Tab.0.right" timestamp="1624367054736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624367054736" />
+    <state width="1836" height="289" key="GridCell.Tab.1.bottom" timestamp="1624350038656">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624350038656" />
+    <state width="1836" height="289" key="GridCell.Tab.1.center" timestamp="1624350038656">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624350038656" />
+    <state width="1836" height="289" key="GridCell.Tab.1.left" timestamp="1624350038656">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624350038656" />
+    <state width="1836" height="289" key="GridCell.Tab.1.right" timestamp="1624350038656">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1836" height="289" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624350038656" />
+    <state x="536" y="262" width="802" height="551" key="Vcs.Push.Dialog.v2" timestamp="1624367333419">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="536" y="262" width="802" height="551" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1624367333419" />
+    <state x="511" y="282" key="extract.method.dialog" timestamp="1624387999950">
+      <screen x="0" y="0" width="1562" height="1050" />
+    </state>
+    <state x="511" y="282" key="extract.method.dialog/0.0.1562.1050@0.0.1562.1050" timestamp="1624387999950" />
+    <state x="604" y="248" key="run.anything.popup" timestamp="1623845334121">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="604" y="248" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1623845334121" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="getArguments()" language="JAVA" />
+        <watch expression="getArguments().getString(&quot;PARAM1&quot;)" language="JAVA" />
+        <watch expression="listNotes" language="JAVA" />
+        <watch expression="arrDate[0]" language="JAVA" />
+        <watch expression="(&quot;1.1.1&quot;).split(&quot;/.&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

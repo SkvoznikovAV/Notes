@@ -5,4 +5,16 @@
     <string name="description_note">Описание заметки</string>
     <string name="btn_change_date_note_name">Изменить дату заметки</string>
     <string name="btn_ok">OK</string>
+    <string name="search">search</string>
+    <string name="info">О приложении</string>
+    <string name="add">Добавить заметку</string>
+    <string name="del">Удалить заметку</string>
+    <string name="menu_del">Удалить</string>
+    <string name="menu_arh">Отправить в архив</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="about_app">О приложении</string>
+    <string name="about_app_description">Домашнее задание в рамках курса android разработки geekBrains</string>
+    <string name="user_name">Гость</string>
+    <string name="user_status">Вы не авторизованы</string>
 </resources>

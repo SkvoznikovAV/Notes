@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class NoteFragment extends Fragment {
     private static final String KEY_NOTE = "KEY_NOTE";
 
-    Note note;
+    private Note note;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,26 +40,29 @@ public class NoteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if (getArguments() != null) {
+        if (note != null) {
             ((TextView)view.findViewById(R.id.date_note)).setText(note.getDateCreate());
             ((TextView)view.findViewById(R.id.header_note)).setText(note.getName());
             ((TextView)view.findViewById(R.id.description_note)).setText(note.getDescription());
 
             view.findViewById(R.id.btn_change_date_note).setOnClickListener(v -> {
-                ChangeDateNoteFragment changeDateNoteFragment = ChangeDateNoteFragment.newInstance(note.getDateCreate());
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-
-                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-                    fragmentTransaction.replace(R.id.maincontainer,changeDateNoteFragment);
-                    fragmentTransaction.addToBackStack(null);
-                }else {
-                    fragmentTransaction.replace(R.id.note_container,changeDateNoteFragment);
-                    fragmentTransaction.addToBackStack(null);
-                }
-
-                fragmentTransaction.commit();
+                setButtonChangeDateListener();
             });
         }
+    }
+
+    private void setButtonChangeDateListener() {
+        ChangeDateNoteFragment changeDateNoteFragment = ChangeDateNoteFragment.newInstance(note.getDateCreate());
+        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+
+        int inContainer=R.id.maincontainer;
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            inContainer=R.id.note_container;
+        }
+
+        fragmentTransaction.replace(inContainer,changeDateNoteFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     public static NoteFragment newInstance(Note note) {
