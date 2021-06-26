@@ -5,16 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
-import java.util.ArrayList;
 
 public class NoteFragment extends Fragment {
     private static final String KEY_NOTE = "KEY_NOTE";
@@ -45,13 +40,19 @@ public class NoteFragment extends Fragment {
             ((TextView)view.findViewById(R.id.header_note)).setText(note.getName());
             ((TextView)view.findViewById(R.id.description_note)).setText(note.getDescription());
 
-            view.findViewById(R.id.btn_change_date_note).setOnClickListener(v -> {
-                setButtonChangeDateListener();
+            view.findViewById(R.id.date_note).setOnClickListener(v -> {
+                changeDateNote();
             });
+
+            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                view.findViewById(R.id.btn_note_ok).setOnClickListener(v -> {
+                    requireActivity().onBackPressed();
+                });
+            }
         }
     }
 
-    private void setButtonChangeDateListener() {
+    private void changeDateNote() {
         ChangeDateNoteFragment changeDateNoteFragment = ChangeDateNoteFragment.newInstance(note.getDateCreate());
         FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
 

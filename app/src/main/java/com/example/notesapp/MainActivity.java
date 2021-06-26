@@ -86,6 +86,11 @@ public class MainActivity extends AppCompatActivity {
         notes.add(new Note("Заметка 5","Описание заметки 5","20.06.2021"));
         notes.add(new Note("Заметка 6","Описание заметки 6","15.06.2016"));
         notes.add(new Note("Заметка 7","Описание заметки 7","10.06.2021"));
+        notes.add(new Note("Заметка 8","Описание заметки 8","15.06.2018"));
+        notes.add(new Note("Заметка 9","Описание заметки 9","28.02.2020"));
+        notes.add(new Note("Заметка 10","Описание заметки 10","20.04.2015"));
+        notes.add(new Note("Заметка 11","Описание заметки 11","05.12.2019"));
+        notes.add(new Note("Заметка 12","Описание заметки 12","07.08.2020"));
     }
 
     private Toolbar initToolbar() {

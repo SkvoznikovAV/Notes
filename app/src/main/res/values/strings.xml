@@ -17,4 +17,7 @@
     <string name="about_app_description">Домашнее задание в рамках курса android разработки geekBrains</string>
     <string name="user_name">Гость</string>
     <string name="user_status">Вы не авторизованы</string>
+    <string name="title_note">Title</string>
+    <string name="date_note">date</string>
+    <string name="btn_note_ok">ok</string>
 </resources>

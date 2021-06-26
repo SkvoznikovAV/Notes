@@ -18,4 +18,11 @@ public class Notes implements Serializable {
         return list;
     }
 
+    public Note getNote(int position){
+        return list.get(position);
+    }
+
+    public int getSize() {
+        return list.size();
+    }
 }

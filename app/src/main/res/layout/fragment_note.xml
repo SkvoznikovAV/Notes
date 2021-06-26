@@ -5,31 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/date_note"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/note_date_size"
         android:text="@string/dttm_note" />
-    <TextView
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/header_note"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:hint="@string/note"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="@dimen/note_title_size"
         android:text="@string/note" />
-
-    <TextView
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/description_note"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:textSize="@dimen/note_desc_size"
+        android:hint="@string/description_note"
         android:text="@string/description_note" />
-
-    <Button
-        android:id="@+id/btn_change_date_note"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_change_date_note_name" />
-
 </LinearLayout>
