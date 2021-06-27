@@ -1,13 +1,11 @@
 package com.example.notesapp;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Note implements Serializable {
-    private String dateCreate;
-    private String name;
-    private String description;
+    private final String dateCreate;
+    private final String name;
+    private final String description;
 
     public Note(String name, String description,String dateCreate) {
         this.dateCreate = dateCreate;

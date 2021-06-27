@@ -1,13 +1,11 @@
 package com.example.notesapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -99,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         return toolbar;
     }
 
+    @SuppressLint("NonConstantResourceId")
     private void chooseMenu(int id){
         switch(id){
             case R.id.action_add:

@@ -3,14 +3,13 @@ package com.example.notesapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.ViewHolder> {
-    private Notes data;
+    private final Notes data;
     private OnItemClickListener onItemClickListener;
     private OnItemLongClickListener onItemLongClickListener;
 
@@ -55,8 +54,8 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title;
-        private TextView date;
+        private final TextView title;
+        private final TextView date;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,31 +63,24 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.View
             title = itemView.findViewById(R.id.note_title);
             date = itemView.findViewById(R.id.note_date);
 
-            title.setOnClickListener(v -> {
-                if (onItemClickListener != null){
-                    onItemClickListener.onItemClick(v, getAdapterPosition());
-                }
-            });
+            title.setOnClickListener(this::noteClickListener);
+            date.setOnClickListener(this::noteClickListener);
 
-            date.setOnClickListener(v -> {
-                if (onItemClickListener != null){
-                    onItemClickListener.onItemClick(v, getAdapterPosition());
-                }
-            });
+            title.setOnLongClickListener(this::noteLongClickListener);
+            date.setOnLongClickListener(this::noteLongClickListener);
+        }
 
-            title.setOnLongClickListener(v -> {
-                if (onItemLongClickListener != null){
-                    onItemLongClickListener.onItemLongClick(v, getAdapterPosition());
-                }
-                return false;
-            });
+        private boolean noteLongClickListener(View v) {
+            if (onItemLongClickListener != null) {
+                onItemLongClickListener.onItemLongClick(v, getAdapterPosition());
+            }
+            return false;
+        }
 
-            date.setOnLongClickListener(v -> {
-                if (onItemLongClickListener != null){
-                    onItemLongClickListener.onItemLongClick(v, getAdapterPosition());
-                }
-                return false;
-            });
+        private void noteClickListener(View v) {
+            if (onItemClickListener != null) {
+                onItemClickListener.onItemClick(v, getAdapterPosition());
+            }
         }
 
         public void setData(Note note) {

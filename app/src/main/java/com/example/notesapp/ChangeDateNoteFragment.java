@@ -46,8 +46,10 @@ public class ChangeDateNoteFragment extends Fragment {
         String[] arrDate = date.split("\\.");
         datePicker.init(Integer.parseInt(arrDate[2]),Integer.parseInt(arrDate[1])-1,Integer.parseInt(arrDate[0]),null);
 
-        view.findViewById(R.id.btn_ok).setOnClickListener(v -> {
-            requireActivity().onBackPressed();
-        });
+        view.findViewById(R.id.btn_ok).setOnClickListener(this::onClick);
+    }
+
+    private void onClick(View v) {
+        requireActivity().onBackPressed();
     }
 }
