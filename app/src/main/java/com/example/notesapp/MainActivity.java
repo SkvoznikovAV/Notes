@@ -16,30 +16,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.notesapp.ui.AboutAppFragment;
+import com.example.notesapp.ui.ListNotesFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Notes notes;
-    private boolean isLansScape;
+    private boolean isLandScape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        isLansScape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        isLandScape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
         initMenu();
-        initNotes();
         showStartFragment();
     }
 
     private void showStartFragment(){
-        ListNotesFragment listNotesFragment = ListNotesFragment.newInstance(notes);
+        ListNotesFragment listNotesFragment = ListNotesFragment.newInstance();
 
         int inContainer=R.id.maincontainer;
-        if (isLansScape){
+        if (isLandScape){
             inContainer=R.id.list_notes_container;
         }
 
@@ -75,22 +75,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initNotes() {
-        notes = new Notes();
-        notes.add(new Note("Заметка 1","Описание заметки 1","01.06.2020"));
-        notes.add(new Note("Заметка 2","Описание заметки 2","31.05.2018"));
-        notes.add(new Note("Заметка 3","Описание заметки 3","25.05.2017"));
-        notes.add(new Note("Заметка 4","Описание заметки 4","17.04.2021"));
-        notes.add(new Note("Заметка 5","Описание заметки 5","20.06.2021"));
-        notes.add(new Note("Заметка 6","Описание заметки 6","15.06.2016"));
-        notes.add(new Note("Заметка 7","Описание заметки 7","10.06.2021"));
-        notes.add(new Note("Заметка 8","Описание заметки 8","15.06.2018"));
-        notes.add(new Note("Заметка 9","Описание заметки 9","28.02.2020"));
-        notes.add(new Note("Заметка 10","Описание заметки 10","20.04.2015"));
-        notes.add(new Note("Заметка 11","Описание заметки 11","05.12.2019"));
-        notes.add(new Note("Заметка 12","Описание заметки 12","07.08.2020"));
-    }
-
     private Toolbar initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -116,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         AboutAppFragment aboutAppFragment = new AboutAppFragment();
 
         int inContainer=R.id.maincontainer;
-        if (isLansScape){
+        if (isLandScape){
             inContainer=R.id.note_container;
         }
 
@@ -124,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(inContainer, aboutAppFragment);
 
-        if (!isLansScape) {
+        if (!isLandScape) {
             fragmentTransaction.addToBackStack(null);
         }
         fragmentTransaction.commit();
