@@ -1254,6 +1254,7 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
+dimen date_text_size
 dimen default_dimension
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
@@ -1531,6 +1532,9 @@ dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
 dimen nav_header_dimen
 dimen nav_header_height
+dimen note_date_size
+dimen note_desc_size
+dimen note_title_size
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1551,6 +1555,7 @@ dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
+dimen title_text_size
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1695,6 +1700,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable separator
 drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1792,7 +1798,7 @@ id beginning
 id blocking
 id bottom
 id bounce
-id btn_change_date_note
+id btn_note_ok
 id btn_ok
 id buttonPanel
 id cache_measures
@@ -1922,6 +1928,7 @@ id linear
 id listMode
 id list_item
 id list_notes_container
+id list_notes_view
 id maincontainer
 id masked
 id material_clock_display
@@ -1986,6 +1993,8 @@ id noScroll
 id none
 id normal
 id note_container
+id note_date
+id note_title
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -2103,6 +2112,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2271,6 +2281,7 @@ layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout nav_header_main
+layout note_item
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2345,12 +2356,14 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string btn_change_date_note_name
+string btn_note_ok
 string btn_ok
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string date_note
 string del
 string description_note
 string dttm_note
@@ -2425,6 +2438,7 @@ string path_password_strike_through
 string search
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_note
 string user_name
 string user_status
 style AlertDialog_AppCompat

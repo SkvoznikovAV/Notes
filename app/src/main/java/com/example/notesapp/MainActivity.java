@@ -1,13 +1,11 @@
 package com.example.notesapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -18,30 +16,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.notesapp.ui.AboutAppFragment;
+import com.example.notesapp.ui.ListNotesFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Notes notes;
-    private boolean isLansScape;
+    private boolean isLandScape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        isLansScape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        isLandScape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
         initMenu();
-        initNotes();
         showStartFragment();
     }
 
     private void showStartFragment(){
-        ListNotesFragment listNotesFragment = ListNotesFragment.newInstance(notes);
+        ListNotesFragment listNotesFragment = ListNotesFragment.newInstance();
 
         int inContainer=R.id.maincontainer;
-        if (isLansScape){
+        if (isLandScape){
             inContainer=R.id.list_notes_container;
         }
 
@@ -77,23 +75,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initNotes() {
-        notes = new Notes();
-        notes.add(new Note("Заметка 1","Описание заметки 1","01.06.2020"));
-        notes.add(new Note("Заметка 2","Описание заметки 2","31.05.2018"));
-        notes.add(new Note("Заметка 3","Описание заметки 3","25.05.2017"));
-        notes.add(new Note("Заметка 4","Описание заметки 4","17.04.2021"));
-        notes.add(new Note("Заметка 5","Описание заметки 5","20.06.2021"));
-        notes.add(new Note("Заметка 6","Описание заметки 6","15.06.2016"));
-        notes.add(new Note("Заметка 7","Описание заметки 7","10.06.2021"));
-    }
-
     private Toolbar initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         return toolbar;
     }
 
+    @SuppressLint("NonConstantResourceId")
     private void chooseMenu(int id){
         switch(id){
             case R.id.action_add:
@@ -112,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         AboutAppFragment aboutAppFragment = new AboutAppFragment();
 
         int inContainer=R.id.maincontainer;
-        if (isLansScape){
+        if (isLandScape){
             inContainer=R.id.note_container;
         }
 
@@ -120,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(inContainer, aboutAppFragment);
 
-        if (!isLansScape) {
+        if (!isLandScape) {
             fragmentTransaction.addToBackStack(null);
         }
         fragmentTransaction.commit();
