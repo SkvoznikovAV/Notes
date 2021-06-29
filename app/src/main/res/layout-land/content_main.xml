@@ -11,16 +11,8 @@
     tools:ignore="DisableBaselineAlignment">
 
     <FrameLayout
-        android:id="@+id/list_notes_container"
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="?android:attr/detailsElementBackground"/>
-
-    <FrameLayout
-        android:id="@+id/note_container"
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="?android:attr/detailsElementBackground"/>
+        android:id="@+id/maincontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
 </LinearLayout>

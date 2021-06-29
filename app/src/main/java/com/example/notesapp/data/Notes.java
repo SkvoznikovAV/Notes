@@ -42,4 +42,16 @@ public class Notes implements Serializable {
         this.add(new Note("Заметка 11","Описание заметки 11","05.12.2019"));
         this.add(new Note("Заметка 12","Описание заметки 12","07.08.2020"));
     }
+
+    public void updateNoteData(int position, Note note) {
+        list.set(position, note);
+    }
+
+    public void deleteNote(int position){
+        list.remove(position);
+    }
+
+    public void addNote(Note note) {
+        list.add(note);
+    }
 }

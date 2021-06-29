@@ -15,12 +15,6 @@
         android:title="@string/add"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_del"
-        android:icon="@android:drawable/ic_menu_delete"
-        android:orderInCategory="10"
-        android:title="@string/del"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_info"
         android:icon="@android:drawable/ic_menu_info_details"
         android:orderInCategory="20"

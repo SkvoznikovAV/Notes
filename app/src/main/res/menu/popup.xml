@@ -6,7 +6,7 @@
         android:id="@+id/popup_item_del"
         android:orderInCategory="10"/>
     <item
-        android:title="@string/menu_arh"
-        android:id="@+id/popup_item_arh"
+        android:title="@string/menu_change"
+        android:id="@+id/popup_item_change"
         android:orderInCategory="20"/>
 </menu>

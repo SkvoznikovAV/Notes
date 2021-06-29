@@ -1,5 +1,3 @@
-com/example/notesapp/BuildConfig.java
- com.example.notesapp.BuildConfig
 com/example/notesapp/ui/ListNotesAdapter.java
  com.example.notesapp.ui.ListNotesAdapter
  com.example.notesapp.ui.ListNotesAdapter$OnItemClickListener
@@ -9,14 +7,22 @@ com/example/notesapp/ui/AboutAppFragment.java
  com.example.notesapp.ui.AboutAppFragment
 com/example/notesapp/data/Note.java
  com.example.notesapp.data.Note
+com/example/notesapp/BuildConfig.java
+ com.example.notesapp.BuildConfig
+com/example/notesapp/data/Notes.java
+ com.example.notesapp.data.Notes
+com/example/notesapp/observe/Observer.java
+ com.example.notesapp.observe.Observer
+com/example/notesapp/ui/ChangeDateNoteFragment.java
+ com.example.notesapp.ui.ChangeDateNoteFragment
+com/example/notesapp/observe/Publisher.java
+ com.example.notesapp.observe.Publisher
 com/example/notesapp/MainActivity.java
  com.example.notesapp.MainActivity
  com.example.notesapp.MainActivity$1
-com/example/notesapp/data/Notes.java
- com.example.notesapp.data.Notes
 com/example/notesapp/ui/ListNotesFragment.java
  com.example.notesapp.ui.ListNotesFragment
-com/example/notesapp/ui/ChangeDateNoteFragment.java
- com.example.notesapp.ui.ChangeDateNoteFragment
+ com.example.notesapp.ui.ListNotesFragment$1
+ com.example.notesapp.ui.ListNotesFragment$2
 com/example/notesapp/ui/NoteFragment.java
  com.example.notesapp.ui.NoteFragment

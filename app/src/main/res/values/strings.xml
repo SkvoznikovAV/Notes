@@ -20,4 +20,5 @@
     <string name="title_note">Title</string>
     <string name="date_note">date</string>
     <string name="btn_note_ok">ok</string>
+    <string name="menu_change">Изменить</string>
 </resources>
