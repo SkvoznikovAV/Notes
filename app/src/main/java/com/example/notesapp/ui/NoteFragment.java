@@ -1,23 +1,42 @@
 package com.example.notesapp.ui;
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.notesapp.MainActivity;
 import com.example.notesapp.R;
 import com.example.notesapp.data.Note;
+import com.example.notesapp.observe.Publisher;
+
+import org.w3c.dom.Text;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class NoteFragment extends Fragment {
     private static final String KEY_NOTE = "KEY_NOTE";
 
     private Note note;
+    private Publisher publisher;
+    private TextView dateNoteView;
+    private TextView titleNoteView;
+    private TextView descriptionNoteView;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,13 +54,44 @@ public class NoteFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        MainActivity activity = (MainActivity)context;
+        publisher = activity.getPublisher();
+    }
+
+    @Override
+    public void onDetach() {
+        publisher = null;
+        super.onDetach();
+    }
+
+    private Note getChangedNote(){
+        if (titleNoteView!=null & descriptionNoteView!=null & dateNoteView!=null) {
+            return new Note(titleNoteView.getText().toString(), descriptionNoteView.getText().toString(), dateNoteView.getText().toString());
+        } else {
+            return null;
+        }
+    }
+
+    private Spanned getUnderLineText(String txt) {
+        String htmlTaggedString  = "<u>"+txt+"</u>";
+        Spanned textSpan = android.text.Html.fromHtml(htmlTaggedString);
+        return textSpan;
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        dateNoteView = view.findViewById(R.id.date_note);
+        titleNoteView = view.findViewById(R.id.header_note);
+        descriptionNoteView = view.findViewById(R.id.description_note);
+
         if (note != null) {
-            ((TextView)view.findViewById(R.id.date_note)).setText(note.getDateCreate());
-            ((TextView)view.findViewById(R.id.header_note)).setText(note.getName());
-            ((TextView)view.findViewById(R.id.description_note)).setText(note.getDescription());
+            dateNoteView.setText(getUnderLineText(note.getDateCreate()));
+            titleNoteView.setText(note.getName());
+            descriptionNoteView.setText(note.getDescription());
 
             view.findViewById(R.id.date_note).setOnClickListener(v -> {
                 changeDateNote();
@@ -55,18 +105,35 @@ public class NoteFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        publisher.notifySingle(getChangedNote());
+    }
+
     private void changeDateNote() {
-        ChangeDateNoteFragment changeDateNoteFragment = ChangeDateNoteFragment.newInstance(note.getDateCreate());
-        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+        Calendar dateAndTime=Calendar.getInstance();
 
-        int inContainer=R.id.maincontainer;
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            inContainer=R.id.note_container;
-        }
+        String[] arrDate = note.getDateCreate().split("\\.");
 
-        fragmentTransaction.replace(inContainer,changeDateNoteFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        dateAndTime.set(Calendar.YEAR, Integer.parseInt(arrDate[2]));
+        dateAndTime.set(Calendar.MONTH,Integer.parseInt(arrDate[1])-1);
+        dateAndTime.set(Calendar.DAY_OF_MONTH,Integer.parseInt(arrDate[0]));
+
+        DatePickerDialog.OnDateSetListener d = (view1, year, monthOfYear, dayOfMonth) -> {
+            dateAndTime.set(Calendar.YEAR, year);
+            dateAndTime.set(Calendar.MONTH, monthOfYear);
+            dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+            DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+            dateNoteView.setText(getUnderLineText(df.format(dateAndTime.getTime())));
+        };
+
+        new DatePickerDialog(getContext(), d,
+                dateAndTime.get(Calendar.YEAR),
+                dateAndTime.get(Calendar.MONTH),
+                dateAndTime.get(Calendar.DAY_OF_MONTH))
+                .show();
     }
 
     public static NoteFragment newInstance(Note note) {

@@ -1765,7 +1765,6 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
-id action_del
 id action_divider
 id action_image
 id action_info
@@ -1927,7 +1926,6 @@ id line3
 id linear
 id listMode
 id list_item
-id list_notes_container
 id list_notes_view
 id maincontainer
 id masked
@@ -1992,7 +1990,6 @@ id never
 id noScroll
 id none
 id normal
-id note_container
 id note_date
 id note_title
 id notification_background
@@ -2014,7 +2011,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
-id popup_item_arh
+id popup_item_change
 id popup_item_del
 id position
 id postLayout
@@ -2391,6 +2388,7 @@ string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string menu_arh
+string menu_change
 string menu_del
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description

@@ -1,5 +1,6 @@
 package com.example.notesapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -16,37 +17,63 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.notesapp.data.Notes;
+import com.example.notesapp.observe.Publisher;
 import com.example.notesapp.ui.AboutAppFragment;
 import com.example.notesapp.ui.ListNotesFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean isLandScape;
+    private final Publisher publisher = new Publisher();
+    ListNotesFragment listNotesFragment;
+    private static final String LIST_NOTES_FRAGMENT="LIST_NOTES_FRAGMENT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        isLandScape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-
         initMenu();
-        showStartFragment();
+        if (savedInstanceState==null) {
+            showStartFragment();
+        }
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
     }
 
     private void showStartFragment(){
-        ListNotesFragment listNotesFragment = ListNotesFragment.newInstance();
+        if (listNotesFragment==null) {
+            listNotesFragment = ListNotesFragment.newInstance();
+        }
 
         int inContainer=R.id.maincontainer;
-        if (isLandScape){
-            inContainer=R.id.list_notes_container;
-        }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(inContainer, listNotesFragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        if(savedInstanceState!=null) {
+            listNotesFragment = (ListNotesFragment) savedInstanceState.getSerializable(LIST_NOTES_FRAGMENT);
+            showStartFragment();
+        }
+
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        if(outState == null)
+            outState = new Bundle();
+        outState.putSerializable(LIST_NOTES_FRAGMENT,listNotesFragment);
+
+        super.onSaveInstanceState(outState);
     }
 
     private void initMenu() {
@@ -67,7 +94,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
-            chooseMenu(id);
+            switch(id){
+                case R.id.action_info:
+                    showAboutFragment();
+                    break;
+            }
 
             drawer.closeDrawer(GravityCompat.START);
             return true;
@@ -81,36 +112,16 @@ public class MainActivity extends AppCompatActivity {
         return toolbar;
     }
 
-    @SuppressLint("NonConstantResourceId")
-    private void chooseMenu(int id){
-        switch(id){
-            case R.id.action_add:
-                Toast.makeText(this,"Добавление заметки",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_del:
-                Toast.makeText(this,"Удаление заметки",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_info:
-                showAboutFragment();
-                break;
-        }
-    }
-
     private void showAboutFragment() {
         AboutAppFragment aboutAppFragment = new AboutAppFragment();
 
         int inContainer=R.id.maincontainer;
-        if (isLandScape){
-            inContainer=R.id.note_container;
-        }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(inContainer, aboutAppFragment);
 
-        if (!isLandScape) {
-            fragmentTransaction.addToBackStack(null);
-        }
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
@@ -120,7 +131,12 @@ public class MainActivity extends AppCompatActivity {
         // Обработка выбора пункта меню приложения (активити)
         int id = item.getItemId();
 
-        chooseMenu(id);
+        switch(id){
+            case R.id.action_info:
+                showAboutFragment();
+                break;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
