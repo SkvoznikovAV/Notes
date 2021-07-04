@@ -3,10 +3,8 @@ package com.example.notesapp.ui;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
@@ -19,19 +17,20 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.notesapp.MainActivity;
 import com.example.notesapp.R;
 import com.example.notesapp.data.Note;
 import com.example.notesapp.data.Notes;
+import com.example.notesapp.data.NotesFirebase;
+import com.example.notesapp.data.NotesSource;
+import com.example.notesapp.data.NotesSourceResponse;
 import com.example.notesapp.observe.Observer;
 import com.example.notesapp.observe.Publisher;
 
 import java.io.Serializable;
 
 public class ListNotesFragment extends Fragment implements Serializable {
-    private Notes notes;
+    private NotesSource notes;
     private Publisher publisher;
     private ListNotesAdapter adapter;
     private RecyclerView recyclerView;
@@ -42,36 +41,16 @@ public class ListNotesFragment extends Fragment implements Serializable {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_notes, container, false);
 
+        initRecyclerView(view);
+        notes = new NotesFirebase().init(new NotesSourceResponse() {
+            @Override
+            public void initialized(NotesSource notes) {
+                adapter.notifyDataSetChanged();
+            }
+        });
+        adapter.setDataSource(notes);
         setHasOptionsMenu(true);
         return view;
-    }
-
-    private void initNotes() {
-        notes = new Notes();
-        notes.init();
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState)
-    {
-        if(outState == null)
-            outState = new Bundle();
-
-        outState.putSerializable(NOTES,notes);
-
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if(savedInstanceState!=null)
-            notes = (Notes) savedInstanceState.getSerializable(NOTES);
-
-        if (notes==null)
-            initNotes();
-
     }
 
     @Override
@@ -87,33 +66,28 @@ public class ListNotesFragment extends Fragment implements Serializable {
         super.onDetach();
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    private void initRecyclerView(View view) {
+        recyclerView = view.findViewById(R.id.list_notes_view);
+        recyclerView.setHasFixedSize(true);
 
-        if (notes != null) {
-            recyclerView = view.findViewById(R.id.list_notes_view);
-            recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
 
-            LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-            recyclerView.setLayoutManager(layoutManager);
+        adapter = new ListNotesAdapter();
+        recyclerView.setAdapter(adapter);
 
-            adapter = new ListNotesAdapter(notes);
-            recyclerView.setAdapter(adapter);
+        DividerItemDecoration itemDecoration = new DividerItemDecoration(getContext(),
+                LinearLayoutManager.VERTICAL);
+        itemDecoration.setDrawable(getResources().getDrawable(R.drawable.separator, null));
+        recyclerView.addItemDecoration(itemDecoration);
 
-            DividerItemDecoration itemDecoration = new DividerItemDecoration(getContext(),
-                    LinearLayoutManager.VERTICAL);
-            itemDecoration.setDrawable(getResources().getDrawable(R.drawable.separator, null));
-            recyclerView.addItemDecoration(itemDecoration);
+        adapter.setOnItemClickListener((view1, position) -> {
+            showNote(position);
+        });
 
-            adapter.setOnItemClickListener((view1, position) -> {
-                showNote(position);
-            });
-
-            adapter.setOnItemLongClickListener((view1, position) -> {
-                showNoteMenu(view1,position);
-            });
-        }
+        adapter.setOnItemLongClickListener((view1, position) -> {
+            showNoteMenu(view1,position);
+        });
     }
 
     private void showNoteMenu(View v,int position) {

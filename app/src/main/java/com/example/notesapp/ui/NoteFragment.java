@@ -68,7 +68,11 @@ public class NoteFragment extends Fragment {
 
     private Note getChangedNote(){
         if (titleNoteView!=null & descriptionNoteView!=null & dateNoteView!=null) {
-            return new Note(titleNoteView.getText().toString(), descriptionNoteView.getText().toString(), dateNoteView.getText().toString());
+            Note changedNote = new Note(titleNoteView.getText().toString(),
+                    descriptionNoteView.getText().toString(),
+                    dateNoteView.getText().toString());
+            changedNote.setId(note.getId());
+            return changedNote;
         } else {
             return null;
         }

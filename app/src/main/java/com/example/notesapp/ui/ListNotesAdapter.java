@@ -11,14 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.notesapp.R;
 import com.example.notesapp.data.Note;
 import com.example.notesapp.data.Notes;
+import com.example.notesapp.data.NotesSource;
 
 public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.ViewHolder> {
-    private final Notes data;
+    private NotesSource data;
     private OnItemClickListener onItemClickListener;
     private OnItemLongClickListener onItemLongClickListener;
 
-    public ListNotesAdapter(Notes data) {
-        this.data = data;
+    public ListNotesAdapter() {
+
+    }
+
+    public void setDataSource(NotesSource notes) {
+        this.data = notes;
+        notifyDataSetChanged();
     }
 
     @NonNull
