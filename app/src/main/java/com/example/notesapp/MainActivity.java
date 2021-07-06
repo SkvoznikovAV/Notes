@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initMenu();
-        //if (savedInstanceState==null) {
-            showStartFragment();
-        //}
+        showStartFragment();
     }
 
     public Publisher getPublisher() {
@@ -59,20 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-//        if(savedInstanceState!=null) {
-//            listNotesFragment = (ListNotesFragment) savedInstanceState.getSerializable(LIST_NOTES_FRAGMENT);
-//            showStartFragment();
-//        }
-
         super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-//        if(outState == null)
-//            outState = new Bundle();
-//        outState.putSerializable(LIST_NOTES_FRAGMENT,listNotesFragment);
-
         super.onSaveInstanceState(outState);
     }
 
