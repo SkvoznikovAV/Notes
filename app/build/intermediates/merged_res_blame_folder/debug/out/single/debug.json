@@ -12,6 +12,10 @@
         "source": "/home/sav/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_change_date_note.xml"
     },
     {
+        "merged": "/home/sav/AndroidStudioProjects/Notes/app/build/intermediates/res/merged/debug/layout_fragment_dialog_note.xml.flat",
+        "source": "/home/sav/AndroidStudioProjects/Notes/app/src/main/res/layout/fragment_dialog_note.xml"
+    },
+    {
         "merged": "/home/sav/AndroidStudioProjects/Notes/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/home/sav/AndroidStudioProjects/Notes/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },

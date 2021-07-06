@@ -2,14 +2,24 @@ com/example/notesapp/data/Note.java
  com.example.notesapp.data.Note
 com/example/notesapp/observe/Observer.java
  com.example.notesapp.observe.Observer
-com/example/notesapp/MainActivity.java
- com.example.notesapp.MainActivity
- com.example.notesapp.MainActivity$1
+com/example/notesapp/data/Notes.java
+ com.example.notesapp.data.Notes
 com/example/notesapp/data/NotesFirebase.java
  com.example.notesapp.data.NotesFirebase
  com.example.notesapp.data.NotesFirebase$1
  com.example.notesapp.data.NotesFirebase$2
  com.example.notesapp.data.NotesFirebase$3
+com/example/notesapp/BuildConfig.java
+ com.example.notesapp.BuildConfig
+com/example/notesapp/data/NotesSourceResponse.java
+ com.example.notesapp.data.NotesSourceResponse
+com/example/notesapp/data/NotesSource.java
+ com.example.notesapp.data.NotesSource
+com/example/notesapp/observe/Publisher.java
+ com.example.notesapp.observe.Publisher
+com/example/notesapp/data/NoteMapping.java
+ com.example.notesapp.data.NoteMapping
+ com.example.notesapp.data.NoteMapping$Fields
 com/example/notesapp/ui/ListNotesAdapter.java
  com.example.notesapp.ui.ListNotesAdapter
  com.example.notesapp.ui.ListNotesAdapter$OnItemClickListener
@@ -17,25 +27,18 @@ com/example/notesapp/ui/ListNotesAdapter.java
  com.example.notesapp.ui.ListNotesAdapter$ViewHolder
 com/example/notesapp/ui/AboutAppFragment.java
  com.example.notesapp.ui.AboutAppFragment
-com/example/notesapp/data/NotesSource.java
- com.example.notesapp.data.NotesSource
-com/example/notesapp/data/NoteMapping.java
- com.example.notesapp.data.NoteMapping
- com.example.notesapp.data.NoteMapping$Fields
-com/example/notesapp/BuildConfig.java
- com.example.notesapp.BuildConfig
-com/example/notesapp/observe/Publisher.java
- com.example.notesapp.observe.Publisher
-com/example/notesapp/data/Notes.java
- com.example.notesapp.data.Notes
+com/example/notesapp/ui/NoteFragment.java
+ com.example.notesapp.ui.NoteFragment
+com/example/notesapp/MainActivity.java
+ com.example.notesapp.MainActivity
+ com.example.notesapp.MainActivity$1
+com/example/notesapp/ui/ChangeDateNoteFragment.java
+ com.example.notesapp.ui.ChangeDateNoteFragment
+com/example/notesapp/ui/NoteDialogFragment.java
+ com.example.notesapp.ui.NoteDialogFragment
 com/example/notesapp/ui/ListNotesFragment.java
  com.example.notesapp.ui.ListNotesFragment
  com.example.notesapp.ui.ListNotesFragment$1
  com.example.notesapp.ui.ListNotesFragment$2
  com.example.notesapp.ui.ListNotesFragment$3
-com/example/notesapp/ui/ChangeDateNoteFragment.java
- com.example.notesapp.ui.ChangeDateNoteFragment
-com/example/notesapp/data/NotesSourceResponse.java
- com.example.notesapp.data.NotesSourceResponse
-com/example/notesapp/ui/NoteFragment.java
- com.example.notesapp.ui.NoteFragment
+ com.example.notesapp.ui.ListNotesFragment$4
