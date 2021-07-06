@@ -1,15 +1,15 @@
 com/example/notesapp/data/Note.java
  com.example.notesapp.data.Note
+com/example/notesapp/observe/Observer.java
+ com.example.notesapp.observe.Observer
+com/example/notesapp/MainActivity.java
+ com.example.notesapp.MainActivity
+ com.example.notesapp.MainActivity$1
 com/example/notesapp/data/NotesFirebase.java
  com.example.notesapp.data.NotesFirebase
  com.example.notesapp.data.NotesFirebase$1
  com.example.notesapp.data.NotesFirebase$2
  com.example.notesapp.data.NotesFirebase$3
-com/example/notesapp/MainActivity.java
- com.example.notesapp.MainActivity
- com.example.notesapp.MainActivity$1
-com/example/notesapp/observe/Observer.java
- com.example.notesapp.observe.Observer
 com/example/notesapp/ui/ListNotesAdapter.java
  com.example.notesapp.ui.ListNotesAdapter
  com.example.notesapp.ui.ListNotesAdapter$OnItemClickListener

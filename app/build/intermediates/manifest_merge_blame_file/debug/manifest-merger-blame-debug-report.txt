@@ -6,94 +6,94 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml
+8-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml
+9-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml
 10
 11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:13:5-79
-13-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:13:22-76
+13-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:13:5-79
+13-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:13:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:14:5-67
-14-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:14:22-64
+14-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:14:5-67
+14-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:14:22-64
 15
 16    <application
-16-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:5:5-19:19
+16-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:5:5-19:19
 17        android:allowBackup="true"
-17-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:6:9-35
+17-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:6:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.5.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\c1913e24930468c25617571cfede4ddf\core-1.5.0\AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.5.0] /home/sav/.gradle/caches/transforms-2/files-2.1/de4504a44ff1c2eebbafc7766d076565/core-1.5.0/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:7:9-43
+20-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:7:9-43
 21        android:label="@string/app_name"
-21-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:8:9-41
+21-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:8:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:9:9-54
+22-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:9:9-54
 23        android:supportsRtl="true"
-23-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:10:9-35
+23-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:10:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme.NoActionBar" >
-25-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:11:9-52
+25-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:11:9-52
 26        <activity android:name="com.example.notesapp.MainActivity" >
-26-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:12:9-18:20
-26-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:12:19-47
+26-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:12:9-18:20
+26-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:12:19-47
 27            <intent-filter>
-27-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:13:13-17:29
+27-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:13:13-17:29
 28                <action android:name="android.intent.action.MAIN" />
-28-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:14:17-69
-28-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:14:25-66
+28-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:14:17-69
+28-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:14:25-66
 29
 30                <category android:name="android.intent.category.LAUNCHER" />
-30-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:16:17-77
-30-->C:\Users\dedan\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:16:27-74
+30-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:16:17-77
+30-->/home/sav/AndroidStudioProjects/Notes/app/src/main/AndroidManifest.xml:16:27-74
 31            </intent-filter>
 32        </activity>
 33
 34        <service
-34-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:17:9-23:19
+34-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:17:9-23:19
 35            android:name="com.google.firebase.components.ComponentDiscoveryService"
-35-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:18:13-84
+35-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:18:13-84
 36            android:directBootAware="true"
-36-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+36-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 37            android:exported="false" >
-37-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:19:13-37
+37-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:19:13-37
 38            <meta-data
-38-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:20:13-22:85
+38-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:20:13-22:85
 39                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-39-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:21:17-111
+39-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:21:17-111
 40                android:value="com.google.firebase.components.ComponentRegistrar" />
-40-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\ed5bf3323661f341149b6f829028811b\firebase-firestore-21.4.0\AndroidManifest.xml:22:17-82
+40-->[com.google.firebase:firebase-firestore:21.4.0] /home/sav/.gradle/caches/transforms-2/files-2.1/babeadaab4399629773c8d81a2de2933/firebase-firestore-21.4.0/AndroidManifest.xml:22:17-82
 41        </service>
 42
 43        <activity
-43-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\5576754463f30a589096b1eb00c6a3d1\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+43-->[com.google.android.gms:play-services-base:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/777cb013c1c7400255fd4d9936cd5d9e/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 44            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-44-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\5576754463f30a589096b1eb00c6a3d1\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+44-->[com.google.android.gms:play-services-base:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/777cb013c1c7400255fd4d9936cd5d9e/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
 45            android:exported="false"
-45-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\5576754463f30a589096b1eb00c6a3d1\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+45-->[com.google.android.gms:play-services-base:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/777cb013c1c7400255fd4d9936cd5d9e/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
 46            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-46-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\5576754463f30a589096b1eb00c6a3d1\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+46-->[com.google.android.gms:play-services-base:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/777cb013c1c7400255fd4d9936cd5d9e/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
 47
 48        <provider
-48-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+48-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
 49            android:name="com.google.firebase.provider.FirebaseInitProvider"
-49-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+49-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:27:13-77
 50            android:authorities="com.example.notesapp.firebaseinitprovider"
-50-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+50-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:28:13-72
 51            android:exported="false"
-51-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+51-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:29:13-37
 52            android:initOrder="100" />
-52-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\803c205846aad433c6d4eb6915ec1aee\firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+52-->[com.google.firebase:firebase-common:19.3.0] /home/sav/.gradle/caches/transforms-2/files-2.1/b96b7d38b5091825167b4b5114b05ba0/firebase-common-19.3.0/AndroidManifest.xml:30:13-36
 53
 54        <meta-data
-54-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\921beead2495c298ae16a7247c31d9f4\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+54-->[com.google.android.gms:play-services-basement:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/aed216302ec19ecbea96c44ee84be4c9/play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 55            android:name="com.google.android.gms.version"
-55-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\921beead2495c298ae16a7247c31d9f4\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+55-->[com.google.android.gms:play-services-basement:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/aed216302ec19ecbea96c44ee84be4c9/play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
 56            android:value="@integer/google_play_services_version" />
-56-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dedan\.gradle\caches\transforms-2\files-2.1\921beead2495c298ae16a7247c31d9f4\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+56-->[com.google.android.gms:play-services-basement:17.0.0] /home/sav/.gradle/caches/transforms-2/files-2.1/aed216302ec19ecbea96c44ee84be4c9/play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
 57    </application>
 58
 59</manifest>
