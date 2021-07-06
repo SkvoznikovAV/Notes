@@ -82,6 +82,10 @@ public class NotesFirebase implements Serializable,NotesSource {
     public void updateNoteData(int position, Note note) {
         String id = note.getId();
         collection.document(id).set(NoteMapping.toDocument(note));
+
+        if (list.size()!=0) {
+            list.set(position, note);
+        }
     }
 
     @Override

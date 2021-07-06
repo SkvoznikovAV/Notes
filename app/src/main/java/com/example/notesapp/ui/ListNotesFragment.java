@@ -3,10 +3,13 @@ package com.example.notesapp.ui;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -17,6 +20,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import com.example.notesapp.MainActivity;
 import com.example.notesapp.R;
 import com.example.notesapp.data.Note;
@@ -99,16 +104,62 @@ public class ListNotesFragment extends Fragment implements Serializable {
             int id = item.getItemId();
             switch (id) {
                 case R.id.popup_item_del:
-                    notes.deleteNote(position);
-                    adapter.notifyItemRemoved(position);
+                    deleteNote(position);
                     return true;
                 case R.id.popup_item_change:
-                    showNote(position);
+                    changeNote(position);
                     return true;
             }
             return true;
         });
         popupMenu.show();
+    }
+
+    private void changeNote(int position) {
+        Note note = notes.getNote(position);
+
+        publisher.subscribe(new Observer() {
+            @Override
+            public void updateNoteData(Note note) {
+                notes.updateNoteData(position, note);
+                adapter.notifyItemChanged(position);
+
+            }
+        });
+
+        DialogFragment noteDialog = new NoteDialogFragment();
+        Bundle args = new Bundle();
+        args.putSerializable(getString(R.string.key_note),note);
+        noteDialog.setArguments(args);
+        noteDialog.show(requireActivity().getSupportFragmentManager(),null);
+    }
+
+    private void showNote(int position) {
+        Note note = notes.getNote(position);
+
+        publisher.subscribe(new Observer() {
+            @Override
+            public void updateNoteData(Note note) {
+                notes.updateNoteData(position, note);
+                adapter.notifyItemChanged(position);
+            }
+        });
+
+        showNoteFragment(note);
+    }
+
+    private void deleteNote(int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Удаление заметки")
+                .setMessage("Вы уверены что хотите удалить заметку?")
+                .setCancelable(false)
+                .setNegativeButton(R.string.no, (dialog, which) -> {})
+                .setPositiveButton(R.string.yes, (dialog, which) -> {
+                    notes.deleteNote(position);
+                    adapter.notifyItemRemoved(position);
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -132,20 +183,6 @@ public class ListNotesFragment extends Fragment implements Serializable {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private void showNote(int position) {
-        Note note = notes.getNote(position);
-
-        publisher.subscribe(new Observer() {
-            @Override
-            public void updateNoteData(Note note) {
-                notes.updateNoteData(position, note);
-                adapter.notifyItemChanged(position);
-            }
-        });
-
-        showNoteFragment(note);
     }
 
     private void showNoteFragment(Note note) {
