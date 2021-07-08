@@ -21,4 +21,7 @@
     <string name="date_note">date</string>
     <string name="btn_note_ok">ok</string>
     <string name="menu_change">Изменить</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="key_note">NOTE</string>
 </resources>
